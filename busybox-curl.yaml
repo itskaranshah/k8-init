@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+spec:
+  containers:
+  - name: busybox
+    image: radial/busyboxplus:curl
+    imagePullPolicy: IfNotPresent
+    args:
+    - sleep
+    - "5000"
+#  nodeSelector:     #Pdd gets deployed on a node with label disk=ssd
+#    disk: ssd
+

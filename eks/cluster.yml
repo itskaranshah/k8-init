@@ -1,0 +1,51 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: "eks-cluster-1"
+  region: "us-east-1"
+  version: "1.17"
+
+vpc:
+  id: "vpc-fe3ffd83"     
+  subnets:
+    public:
+      us-east-1a: { id: subnet-cb398fad }
+      us-east-1b: { id: subnet-09af1328 }
+  securityGroup: "sg-0d1c4f763afcac5b5"
+  clusterEndpoints:
+    publicAccess: true
+
+cloudWatch:
+  clusterLogging:
+    enableTypes:
+      - "controllerManager"
+      - "scheduler"
+
+iam: 
+  serviceRoleARN: "arn:aws:iam::234812835561:role/eks-service-role"
+
+nodeGroups:
+  - name: eks-ng-1
+    availabilityZones: [ "us-east-1a", "us-east-1b" ]
+    volumeSize: 10
+    minSize: 1
+    maxSize: 2
+    desiredCapacity: 1
+    privateNetworking: false
+    iam:
+      withAddonPolicies:
+        autoScaler: true
+        albIngress: true
+    ssh:
+      allow: true
+      publicKeyName: "eks-nodes"
+    labels:
+      aws.amazon.com/spot: "true"
+      lifecycle: "Ec2Spot"
+    instancesDistribution:
+      maxPrice: 0.017
+      instanceTypes: ["t2.medium", "t2.small"] # At least one instance type should be specified
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBaseCapacity: 0
+      spotInstancePools: 2

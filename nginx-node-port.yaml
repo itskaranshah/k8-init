@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-nodeport
+spec:
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80            #Service endpoint port
+    nodePort: 30080     #Nodeport mapped to service range [30000-32767]. Automatic allocation if not defined
+    targetPort: 80      #Port of target pod
+  selector:             #Label identify the pods for a service 
+    app: nginx
