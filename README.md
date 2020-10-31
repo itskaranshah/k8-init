@@ -1,4 +1,5 @@
 # k8-playground
+
 <img src="./images/k8_architecture.JPG" width="400" height="300"><img src="./images/k8_networking.JPG" width="450" height="285">
 
 **_Control Plane_** manages the worker nodes and the Pods in the cluster\
@@ -157,6 +158,7 @@ $ iptables --flush
 **spec -** What state you desire for the object
 
 ### *[Kubernetes cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)*
+
 <img src="./images/k8_resources.JPG">
 
 <img src="./images/k8_loadbalancer.JPG" width="500" height="300"><img src="./images/k8_ingress.JPG"  width="500" height="230">
