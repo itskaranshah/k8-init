@@ -164,7 +164,8 @@ $ iptables --flush
 <img src="./images/k8_loadbalancer.JPG" width="500" height="300"><img src="./images/k8_ingress.JPG"  width="500" height="230">
 
 ### Accessing multiple clusters
-Install [Krew](https://krew.sigs.k8s.io/)
+Install kubectl plugin manager [Krew](https://krew.sigs.k8s.io/)
+Install kubectl plugin [kubectx](https://github.com/ahmetb/kubectx/)
 ``` 
 $ kubectl krew install ctx
 $ kubectl krew install ns
