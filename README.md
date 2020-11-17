@@ -165,7 +165,7 @@ $ iptables --flush
 
 ### Accessing multiple clusters
 Install [Krew](https://krew.sigs.k8s.io/)
-
+``` 
 $ kubectl krew install ctx
 $ kubectl krew install ns
 $ export KUBECONFIG=~/.kube/config1:~/.kube/config2
@@ -175,3 +175,4 @@ Lists Clusters/Context
 $ kubectl ctx   
 Select Cluster
 $ kubectl ctx <context-name>
+``` 
