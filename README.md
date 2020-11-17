@@ -162,3 +162,16 @@ $ iptables --flush
 <img src="./images/k8_resources.JPG">
 
 <img src="./images/k8_loadbalancer.JPG" width="500" height="300"><img src="./images/k8_ingress.JPG"  width="500" height="230">
+
+### Accessing multiple clusters
+Install [Krew](https://krew.sigs.k8s.io/)
+
+$ kubectl krew install ctx
+$ kubectl krew install ns
+$ export KUBECONFIG=~/.kube/config1:~/.kube/config2
+Merge two config file
+$ kubectl config view --flatten --minify > ~/.kube/config
+Lists Clusters/Context
+$ kubectl ctx   
+Select Cluster
+$ kubectl ctx <context-name>
