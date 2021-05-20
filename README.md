@@ -17,7 +17,8 @@
 
 **_Kubernetes authentication_** Kubernetes uses authentication plugins to authenticate API requests. Number of supported authentication strategies, including X509 client certs, static token files, bootstrap tokens, static password files, service account tokens, OpenID connect tokens, and more.\
 When you authenticate, you authenticate as one of two types of accounts:\
-[User accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#user-accounts-vs-service-accounts) are used by humans or other services outside of the Kubernetes cluster. \
+[User accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#user-accounts-vs-service-accounts) are used by humans or other services outside of the Kubernetes cluster.
+[Service accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/) are managed and used by resources within the Kubernetes cluster itself, such as your pods. Kubernetes creates some service accounts automatically; you can create others using the Kubernetes API. The credentials for service accounts are stored as secrets in Kubernetes and mounted into the pods that should have access to those service accounts.
 
 
 
