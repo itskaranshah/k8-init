@@ -2,6 +2,8 @@
 
 <img src="./images/k8_architecture.JPG" width="400" height="300"><img src="./images/k8_networking.JPG" width="450" height="285">
 
+<img src="./images/kubernetes-architecture.png" width="450" height="300">
+
 **_Control Plane_** manages the worker nodes and the Pods in the cluster\
 **kube-apiserver:** Communication hub for all cluster components, exposes the kubernetes API.\
 **kube-scheduler:** Assign apps to worker node, Auto-detects which pod should be assigned to which node based on resource requirements.\
