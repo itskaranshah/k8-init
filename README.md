@@ -15,6 +15,12 @@
 **kube-proxy:** Load balances traffic b/w the app components, keeps track of endpoints and updates IP tables for routing traffic appropriately.\
 **Container Runtime:** Kubernetes supports several container runtimes: Docker, containerd, CRI-O, and any implementation of the Kubernetes CRI (Container Runtime Interface).
 
+**_Kubernetes authentication_** Kubernetes uses authentication plugins to authenticate API requests. Number of supported authentication strategies, including X509 client certs, static token files, bootstrap tokens, static password files, service account tokens, OpenID connect tokens, and more.\
+When you authenticate, you authenticate as one of two types of accounts:\
+[User accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#user-accounts-vs-service-accounts) are used by humans or other services outside of the Kubernetes cluster. \
+
+
+
 **Deploy a production-grade Kubernetes cluster on AWS**\
 <https://gruntwork.io/guides/kubernetes/how-to-deploy-production-grade-kubernetes-cluster-aws/#what-is-kubernetes>
 
