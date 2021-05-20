@@ -13,6 +13,9 @@
 **kube-proxy:** Load balances traffic b/w the app components, keeps track of endpoints and updates IP tables for routing traffic appropriately.\
 **Container Runtime:** Kubernetes supports several container runtimes: Docker, containerd, CRI-O, and any implementation of the Kubernetes CRI (Container Runtime Interface).
 
+**Deploy a production-grade Kubernetes cluster on AWS**\
+<https://gruntwork.io/guides/kubernetes/how-to-deploy-production-grade-kubernetes-cluster-aws/#what-is-kubernetes>
+
 Using
 **Vagrant box <http://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64-vagrant.box>**
 
