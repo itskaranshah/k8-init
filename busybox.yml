@@ -9,4 +9,5 @@
        - sleep
        - "3600"
      name: busybox
+     imagePullPolicy: IfNotPresent
    restartPolicy: Always
