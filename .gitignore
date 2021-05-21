@@ -1,0 +1,7 @@
+.vscode/settings.json
+*.terraform
+settings.json
+*terraform.tfstate*
+**.terraform\providers**
+*.out
+*.terraform.lock*

@@ -4,7 +4,7 @@ kind: ClusterConfig
 metadata:
   name: "eks-cluster-1"
   region: "us-east-1"
-  version: "1.17"
+  version: "1.18"
 
 vpc:
   id: "vpc-fe3ffd83"     
