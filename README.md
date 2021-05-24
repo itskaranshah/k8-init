@@ -20,7 +20,7 @@ When you authenticate, you authenticate as one of two types of accounts:\
 [User accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#user-accounts-vs-service-accounts) are used by humans or other services outside of the Kubernetes cluster.\
 [Service accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/) are managed and used by resources within the Kubernetes cluster itself, such as your pods. Kubernetes creates some service accounts automatically; you can create others using the Kubernetes API. The credentials for service accounts are stored as secrets in Kubernetes and mounted into the pods that should have access to those service accounts.
 
-
+**Whenever you tell Kubernetes to deploy a pod the scheduler will pick a worker node for that pod, and the kubelet on that worker node will deploy all the containers for that pod together.**
 
 **Deploy a production-grade Kubernetes cluster on AWS**\
 <https://gruntwork.io/guides/kubernetes/how-to-deploy-production-grade-kubernetes-cluster-aws/#what-is-kubernetes>
